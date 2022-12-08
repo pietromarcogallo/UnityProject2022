@@ -24,7 +24,7 @@ public class PlayerInteractionController : MonoBehaviour
     public Button nullButton;
     public Button[] buttons;
 
-    private Interactable currentInteractable;
+    private Interactable currentInteractable, previousInteractable = null;
 
     private string sceneName;
 
@@ -35,6 +35,11 @@ public class PlayerInteractionController : MonoBehaviour
         sceneName = SceneManager.GetActiveScene().name;
         buttons = new Button[6] { chickenButton, cowButton, duckButton, pigButton, sheepButton, nullButton };
         // int correctAnswer = ParseAnswer(currentInteractable.GetComponent<AnimalPlaysClip>().GetCorrectAnswer());
+        DefineButtons();
+    }
+
+    private void DefineButtons()
+    {
         firstButtonToAppear = Random.Range(0, 6);
         secondButtonToAppear = Random.Range(0, 6);
         while (secondButtonToAppear == firstButtonToAppear)
@@ -79,10 +84,9 @@ public class PlayerInteractionController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Physics.Raycast(transform.position, transform.forward, out RaycastHit hit, maxDistance, interactableLayers))
-            currentInteractable = hit.collider.GetComponent<Interactable>();
-        else
-            currentInteractable = null;
+
+        currentInteractable = Physics.Raycast(transform.position, transform.forward, out RaycastHit hit, maxDistance, interactableLayers) ?
+            hit.collider.GetComponent<Interactable>() : null;
 
         if (sceneName == "Game1_3_FPM")
         {
@@ -106,6 +110,16 @@ public class PlayerInteractionController : MonoBehaviour
                     correctAnswer = ParseAnswertFromStringToInt(currentInteractable.GetCorrectAnimalAnswer(visual: false));
                 else
                     correctAnswer = ParseAnswertFromStringToInt(currentInteractable.GetCorrectAnimalAnswer(visual: true));
+
+                /* This code snippet allows to randomly generate new buttons for every new animal,
+                   but maintain the same one if you interact more times with the same animal. */
+                if (currentInteractable != previousInteractable)
+                {
+                    previousInteractable = currentInteractable;
+                    if (previousInteractable != null)
+                        DefineButtons();
+                }
+
                 // Limit case: none of the appearing icon is the cross, but the answer isn't any of the appearing icons
                 if (firstButtonToAppear != 5 && secondButtonToAppear != 5 && thirdButtonToAppear != 5)
                     if (correctAnswer != firstButtonToAppear && correctAnswer != secondButtonToAppear && correctAnswer != thirdButtonToAppear)
@@ -114,10 +128,10 @@ public class PlayerInteractionController : MonoBehaviour
             buttons[firstButtonToAppear].gameObject.SetActive(currentInteractable != null);
             buttons[secondButtonToAppear].gameObject.SetActive(currentInteractable != null);
             buttons[thirdButtonToAppear].gameObject.SetActive(currentInteractable != null);
-            // Make the three choices appear where they should be
-            buttons[firstButtonToAppear].transform.localPosition = new Vector3(0, -150f, 0);
+            // Make the three choices appear where they should be in the canvas
+            buttons[firstButtonToAppear].transform.localPosition = new Vector3(0, -220f, 0);
             buttons[secondButtonToAppear].transform.localPosition = new Vector3(0, 0, 0);
-            buttons[thirdButtonToAppear].transform.localPosition = new Vector3(0, 150f, 0);
+            buttons[thirdButtonToAppear].transform.localPosition = new Vector3(0, 220f, 0);
             // All other buttons mustn't appear
             for (int i = 0; i < buttons.Length; ++i)
                 if (i != firstButtonToAppear && i != secondButtonToAppear && i != thirdButtonToAppear)
@@ -130,12 +144,14 @@ public class PlayerInteractionController : MonoBehaviour
         // Debug.Log(EventSystem.current.currentSelectedGameObject.name);
         // Debug.Log("is high button: " + highChoice);
         if (currentInteractable != null)
+        {
             if (sceneName == "Game1_3_FPM")
                 currentInteractable.OnInteraction(EventSystem.current.currentSelectedGameObject.name == "HighButton");
             else if (sceneName == "Game1_3_FPM2")
                 currentInteractable.OnInteraction(EventSystem.current.currentSelectedGameObject.name, visual: false);
             else
                 currentInteractable.OnInteraction(EventSystem.current.currentSelectedGameObject.name, visual: true);
+        }
     }
 
     public string[] GetButtons()

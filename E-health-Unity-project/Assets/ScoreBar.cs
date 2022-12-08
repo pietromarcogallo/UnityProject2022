@@ -33,7 +33,10 @@ public class ScoreBar : MonoBehaviour
     {
         while (slider.value != PlayerPrefs.GetFloat("FinalScore"))
         {
-            slider.value++;
+            if (SceneManager.GetActiveScene().name == "ScoreScene")
+                slider.value += 5;
+            else
+                slider.value++;
             fill.color = gradient.Evaluate(slider.normalizedValue);
             animator.SetFloat("Score", slider.value);
             yield return new WaitForSeconds(Time.deltaTime);
