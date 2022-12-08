@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Audio;
 
 public class AnswerScript_GL : MonoBehaviour
 {
@@ -10,8 +11,8 @@ public class AnswerScript_GL : MonoBehaviour
    public QuizManager_GL quizManager;
 
    public Color startColor;
-
-  private void Start()
+   
+   private void Start()
    {
    startColor = GetComponent<Image>().color; 
    }
@@ -32,4 +33,5 @@ public class AnswerScript_GL : MonoBehaviour
       }
 
    }
+
 }

@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
+using UnityEngine.Audio;
 
 public class QuizManager_GL : MonoBehaviour
 {
@@ -23,6 +24,12 @@ public class QuizManager_GL : MonoBehaviour
     private int coord_small = 150;
     private int coord_large = 500;
     private int vel;
+    
+    public GameObject settingsPopup;
+    public Slider clickSlider;
+    public Slider musicSlider;
+    public AudioMixer audioMixer;
+    public AudioSource clickSound;
     private void Start()
     {
         TotalQuestions = QnA.Count;
@@ -30,6 +37,15 @@ public class QuizManager_GL : MonoBehaviour
         generateQuestion();
     }
 
+    void Update()
+    {
+
+        if (Input.GetMouseButtonDown(0) == true)
+        {
+            clickSound.Play();
+        }
+    }
+    
     void GameOver()
     {
         Quizpanel.SetActive(false);
@@ -115,4 +131,42 @@ public class QuizManager_GL : MonoBehaviour
         GameOver();
         }
  }
+    
+    public void toggleSettingsPopup()
+    {
+        settingsPopup.SetActive(!settingsPopup.activeSelf);
+    }
+
+    public void closeSettingsPopup()
+    {
+        settingsPopup.SetActive(false);
+    }
+
+
+    public void ChangeVolume()
+    {
+        if( musicSlider.value <= - 48)
+        {
+            audioMixer.SetFloat("MusicVol", -80);
+        }
+        else
+        {
+            audioMixer.SetFloat("MusicVol", musicSlider.value);
+        }
+    }
+    
+
+    public void clickSliderValueChange()
+    {
+        if (clickSlider.value <= -48)
+        {
+            audioMixer.SetFloat("SoundEffectsVol", -80);
+        }
+        else
+        {
+            audioMixer.SetFloat("SoundEffectsVol", clickSlider.value);
+        }
+    }
+  
 }
+
