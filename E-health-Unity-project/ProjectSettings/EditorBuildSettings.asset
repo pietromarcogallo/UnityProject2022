@@ -12,11 +12,17 @@ EditorBuildSettings:
     path: Assets/Scenes/Tutorial.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
-    path: Assets/Scenes/Game1_1.unity
+    path: Assets/Scenes/PuzzleChoice.unity
     guid: 5f82ccbc7f92b43838322df4f02e448b
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/Lana_Game.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Game1_2.unity
+    guid: 70ec241bcfd314cdfad09644ccdf6d4a
   - enabled: 1
     path: Assets/Scenes/Game1_3/Game1_3_Presentation.unity
     guid: 94b8ee9f5141d47f8b4c577d72c8ce81
