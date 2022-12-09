@@ -22,7 +22,7 @@ public class PlayerInteractionController : MonoBehaviour
     public Button pigButton;
     public Button sheepButton;
     public Button nullButton;
-    public Button[] buttons;
+    private Button[] buttons;
 
     private Interactable currentInteractable, previousInteractable = null;
 
@@ -34,7 +34,9 @@ public class PlayerInteractionController : MonoBehaviour
     {
         sceneName = SceneManager.GetActiveScene().name;
         buttons = new Button[6] { chickenButton, cowButton, duckButton, pigButton, sheepButton, nullButton };
-        // int correctAnswer = ParseAnswer(currentInteractable.GetComponent<AnimalPlaysClip>().GetCorrectAnswer());
+        // In the second minigame, after the explosion, the new music restarts after the presentation.
+        if (sceneName == "Game1_3_FPM2")
+            GameObject.FindGameObjectWithTag("music").GetComponent<Music>().PlayMusic(GetComponent<AudioSource>().clip);
         DefineButtons();
     }
 

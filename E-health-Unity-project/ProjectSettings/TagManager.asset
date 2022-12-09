@@ -17,6 +17,7 @@ TagManager:
   - bar_1
   - bar_2
   - bar_3
+  - music
   layers:
   - Default
   - TransparentFX

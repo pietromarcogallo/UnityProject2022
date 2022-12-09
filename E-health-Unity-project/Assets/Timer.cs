@@ -6,6 +6,11 @@ public class Timer : MonoBehaviour
 {
     private float timer = 5f;
 
+    private void Start()
+    {
+        GameObject.FindGameObjectWithTag("music").GetComponent<Music>().StopMusic();
+    }
+
     // Update is called once per frame
     void Update()
     {

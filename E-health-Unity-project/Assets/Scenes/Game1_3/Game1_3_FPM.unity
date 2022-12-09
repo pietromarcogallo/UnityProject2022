@@ -595,7 +595,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a043181065ccd445aa7fdabc53f84f33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxDistance: 3
+  maxDistance: 2
   interactableLayers:
     serializedVersion: 2
     m_Bits: 1
@@ -607,7 +607,6 @@ MonoBehaviour:
   pigButton: {fileID: 0}
   sheepButton: {fileID: 0}
   nullButton: {fileID: 0}
-  buttons: []
 --- !u!82 &67492117
 AudioSource:
   m_ObjectHideFlags: 0
@@ -617,9 +616,9 @@ AudioSource:
   m_GameObject: {fileID: 67492111}
   m_Enabled: 0
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: c1c2d241cfba04890b59ce2e2fec5b6d, type: 3}
-  m_PlayOnAwake: 1
+  OutputAudioMixerGroup: {fileID: 6536924141317832982, guid: be4cc85fc1b96428bb072871c3867055, type: 2}
+  m_audioClip: {fileID: 8300000, guid: 2c08842d78540479cbae890dfcd21904, type: 3}
+  m_PlayOnAwake: 0
   m_Volume: 0.05
   m_Pitch: 1
   Loop: 1
@@ -10076,11 +10075,11 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1873935398}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 6536924141317832982, guid: be4cc85fc1b96428bb072871c3867055, type: 2}
-  m_audioClip: {fileID: 8300000, guid: c1c2d241cfba04890b59ce2e2fec5b6d, type: 3}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 8300000, guid: 2c08842d78540479cbae890dfcd21904, type: 3}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 1
