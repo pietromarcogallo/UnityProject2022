@@ -40,12 +40,13 @@ public class QuizManager_GL : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetMouseButtonDown(0) == true)
+        if (Input.GetMouseButtonDown(0) == true && SceneManager.GetActiveScene().name == "Lana_Game")
         {
             clickSound.Play();
         }
     }
-    
+
+
     void GameOver()
     {
         Quizpanel.SetActive(false);
@@ -130,8 +131,10 @@ public class QuizManager_GL : MonoBehaviour
         Debug.Log("Out of Questions");
         GameOver();
         }
- }
-    
+    }
+
+
+
     public void toggleSettingsPopup()
     {
         settingsPopup.SetActive(!settingsPopup.activeSelf);
