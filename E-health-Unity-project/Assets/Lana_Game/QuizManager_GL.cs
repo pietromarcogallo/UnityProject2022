@@ -39,11 +39,6 @@ public class QuizManager_GL : MonoBehaviour
 
     void Update()
     {
-
-        if (Input.GetMouseButtonDown(0) == true && SceneManager.GetActiveScene().name == "Lana_Game")
-        {
-            clickSound.Play();
-        }
     }
 
 

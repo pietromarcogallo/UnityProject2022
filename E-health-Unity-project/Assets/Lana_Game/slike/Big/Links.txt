@@ -8,3 +8,8 @@
 8. Train: <a href="https://www.flaticon.com/free-icons/train" title="train icons">Train icons created by Smashicons - Flaticon</a>
 9. Whale: <a href="https://www.flaticon.com/free-icons/whale" title="whale icons">Whale icons created by BZZRINCANTATION - Flaticon</a>
 10.  House: <a href="https://www.flaticon.com/free-icons/home" title="home icons">Home icons created by Freepik - Flaticon</a>
+11. Piano: <a href="https://www.flaticon.com/free-icons/piano" title="piano icons">Piano icons created by Flat Icons - Flaticon</a>
+12. Bison: <a href="https://www.flaticon.com/free-icons/bison" title="bison icons">Bison icons created by Flat Icons - Flaticon</a>
+13. Washing Machine: <a href="https://www.flaticon.com/free-icons/washing-machine" title="washing machine icons">Washing machine icons created by Freepik - Flaticon</a>
+14. Sofa: <a href="https://www.flaticon.com/free-icons/sofa" title="sofa icons">Sofa icons created by Freepik - Flaticon</a>
+15. Closet: <a href="https://www.flaticon.com/free-icons/closet" title="closet icons">Closet icons created by Smashicons - Flaticon</a>
