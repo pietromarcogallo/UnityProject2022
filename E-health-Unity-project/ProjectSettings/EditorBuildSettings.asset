@@ -56,7 +56,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Game1_3/ChoiceAfterGame.unity
     guid: 7d9510af1be59408b8ab68d851d58059
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Game2.unity
     guid: 65f80c884b443477ea14279bbb497853
+  - enabled: 1
+    path: Assets/Scenes/FPS_game/SameShape.unity
+    guid: c3319fcd519a51e41a281b41421fef87
+  - enabled: 1
+    path: Assets/Scenes/FPS_game/SameColor.unity
+    guid: 873dc4532e7c6d54ca3299a985e559e0
+  - enabled: 1
+    path: Assets/Scenes/FPS_game/SameShapeDifferentColor.unity
+    guid: 08e7ead56e2227a4faeb93d7c42d66a4
+  - enabled: 1
+    path: Assets/Scenes/FPS_game/SameColorDifferentShape.unity
+    guid: 3865a10f2425e834996bc67b3bdc6705
   m_configObjects: {}

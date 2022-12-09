@@ -15,7 +15,8 @@ public class SeriousGameManager : MonoBehaviour
 
     private void Start()
     {
-        
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None; 
     }
 
     void Update()

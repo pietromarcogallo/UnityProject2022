@@ -1,0 +1,11 @@
+Model Information:
+* title:	Wooden Hex
+* source:	https://sketchfab.com/3d-models/wooden-hex-6af1402622164cde8ef0f09adc62500b
+* author:	Taha Rizgar (https://sketchfab.com/taharizgar)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Wooden Hex" (https://sketchfab.com/3d-models/wooden-hex-6af1402622164cde8ef0f09adc62500b) by Taha Rizgar (https://sketchfab.com/taharizgar) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
