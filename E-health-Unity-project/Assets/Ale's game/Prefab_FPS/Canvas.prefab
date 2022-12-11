@@ -149,7 +149,6 @@ GameObject:
   - component: {fileID: 4644328898170108891}
   - component: {fileID: 4644328898170108890}
   - component: {fileID: 4644328898170108893}
-  - component: {fileID: 4644328898170108892}
   m_Layer: 6
   m_Name: Score
   m_TagString: Untagged
@@ -200,7 +199,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 0}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -232,22 +231,6 @@ MonoBehaviour:
   scorePenalty: 5
   currentScore: 0
   scoreText: {fileID: 4644328897486614789}
---- !u!114 &4644328898170108892
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4644328898170108894}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b8b3b2a436a9e404e8dee243175a2462, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scoreAmountOnKill: 10
-  scorePenalty: 5
-  currentScore: 0
-  scoreText: {fileID: 0}
 --- !u!1 &4644328899435355198
 GameObject:
   m_ObjectHideFlags: 0

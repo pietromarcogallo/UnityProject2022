@@ -63,7 +63,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 7c0e0e56aed3a0b499e84cb7f11b97fa, type: 2}
+  - {fileID: 2100000, guid: f20d628d0ad18704f9a6bca5fd4cb8c8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b6ce5ac50398394d8f09f2b4920ffdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletShape: 
+  bulletShape: Cube
 --- !u!54 &-1158983567122897573
 Rigidbody:
   m_ObjectHideFlags: 0

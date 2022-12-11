@@ -21,16 +21,17 @@ public class BulletCollision : MonoBehaviour
     {
         RaycastHit hit;
         string bulletColor;
-        bulletColor = gameObject.GetComponent<Renderer>().material.name;
         string matColor;
         string matShape;
 
         if (Physics.Raycast(new Ray(mPrevPos, (transform.position - mPrevPos).normalized), out hit,
                 (transform.position - mPrevPos).magnitude))
         {
-            matColor = hit.transform.GetComponent<Renderer>().material.name;
             if (SceneManager.GetActiveScene().name == "SameColor" || SceneManager.GetActiveScene().name == "SameColorDifferentShape")
             {
+                matColor = hit.transform.GetComponent<Renderer>().material.name;
+                bulletColor = gameObject.GetComponent<Renderer>().material.name;
+                matShape = hit.transform.tag;
                 if (matColor == bulletColor)
                 {
                     CharacterStats enemyStats = hit.transform.GetComponent<CharacterStats>();
@@ -39,7 +40,7 @@ public class BulletCollision : MonoBehaviour
                     PlayerHUDfps.istance.UpdateScoreAmount();
                     if (isDead == true) Destroy(hit.transform.gameObject);
                 }
-                else if (matColor != bulletColor && (matColor == "Blue" || matColor == "Red" || matColor == "Green" || matColor == "Yellow" ))
+                else if (matColor != bulletColor && (matShape == "Cone" || matShape == "Cube" || matShape == "Hexagon" || matShape == "Sphere"))
                     PlayerHUDfps.istance.LessdateScoreAmount();
                 Destroy(gameObject);
             }
