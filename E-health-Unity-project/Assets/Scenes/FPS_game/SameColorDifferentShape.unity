@@ -637,22 +637,103 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 01a21395407fe6d4d8b7849751d7bd26, type: 2}
   - {fileID: 2100000, guid: a886432ab85b2c540bb5df8847e4bea0, type: 2}
   waves:
-  - name: Wave1
-    enemiesAmount: 6
-    delay: 1.5
+  - name: 1
+    enemiesAmount: 1
+    delay: 0
     enemy:
-    - {fileID: 2559540664490341222, guid: 0d28b78435c6b9f438cbaf080d5c7425, type: 3}
-    - {fileID: 8429015845098137927, guid: 91987eda1aa0f46488e761842c4c1931, type: 3}
-    - {fileID: 7026175942818691917, guid: 184cca27916e8514293e1c089d2d5098, type: 3}
-  - name: Wave2
-    enemiesAmount: 9
-    delay: 1
-    enemy:
-    - {fileID: 2559540664490341222, guid: 0d28b78435c6b9f438cbaf080d5c7425, type: 3}
-    - {fileID: 8429015845098137927, guid: 91987eda1aa0f46488e761842c4c1931, type: 3}
     - {fileID: 7026175942818691917, guid: 184cca27916e8514293e1c089d2d5098, type: 3}
     - {fileID: 6771460709475449143, guid: 55c539553846b2346a3b432da7ca4834, type: 3}
-  timeBetweenWaves: 3
+    - {fileID: 2559540664490341222, guid: 0d28b78435c6b9f438cbaf080d5c7425, type: 3}
+    - {fileID: 8429015845098137927, guid: 91987eda1aa0f46488e761842c4c1931, type: 3}
+  - name: 2
+    enemiesAmount: 1
+    delay: 0
+    enemy:
+    - {fileID: 7026175942818691917, guid: 184cca27916e8514293e1c089d2d5098, type: 3}
+    - {fileID: 6771460709475449143, guid: 55c539553846b2346a3b432da7ca4834, type: 3}
+    - {fileID: 2559540664490341222, guid: 0d28b78435c6b9f438cbaf080d5c7425, type: 3}
+    - {fileID: 8429015845098137927, guid: 91987eda1aa0f46488e761842c4c1931, type: 3}
+  - name: 3
+    enemiesAmount: 1
+    delay: 0
+    enemy:
+    - {fileID: 7026175942818691917, guid: 184cca27916e8514293e1c089d2d5098, type: 3}
+    - {fileID: 6771460709475449143, guid: 55c539553846b2346a3b432da7ca4834, type: 3}
+    - {fileID: 2559540664490341222, guid: 0d28b78435c6b9f438cbaf080d5c7425, type: 3}
+    - {fileID: 8429015845098137927, guid: 91987eda1aa0f46488e761842c4c1931, type: 3}
+  - name: 4
+    enemiesAmount: 1
+    delay: 0
+    enemy:
+    - {fileID: 7026175942818691917, guid: 184cca27916e8514293e1c089d2d5098, type: 3}
+    - {fileID: 6771460709475449143, guid: 55c539553846b2346a3b432da7ca4834, type: 3}
+    - {fileID: 2559540664490341222, guid: 0d28b78435c6b9f438cbaf080d5c7425, type: 3}
+    - {fileID: 8429015845098137927, guid: 91987eda1aa0f46488e761842c4c1931, type: 3}
+  - name: 5
+    enemiesAmount: 1
+    delay: 0
+    enemy:
+    - {fileID: 7026175942818691917, guid: 184cca27916e8514293e1c089d2d5098, type: 3}
+    - {fileID: 6771460709475449143, guid: 55c539553846b2346a3b432da7ca4834, type: 3}
+    - {fileID: 2559540664490341222, guid: 0d28b78435c6b9f438cbaf080d5c7425, type: 3}
+    - {fileID: 8429015845098137927, guid: 91987eda1aa0f46488e761842c4c1931, type: 3}
+  - name: 6
+    enemiesAmount: 1
+    delay: 0
+    enemy:
+    - {fileID: 7026175942818691917, guid: 184cca27916e8514293e1c089d2d5098, type: 3}
+    - {fileID: 6771460709475449143, guid: 55c539553846b2346a3b432da7ca4834, type: 3}
+    - {fileID: 2559540664490341222, guid: 0d28b78435c6b9f438cbaf080d5c7425, type: 3}
+    - {fileID: 8429015845098137927, guid: 91987eda1aa0f46488e761842c4c1931, type: 3}
+  - name: 7
+    enemiesAmount: 1
+    delay: 0
+    enemy:
+    - {fileID: 7026175942818691917, guid: 184cca27916e8514293e1c089d2d5098, type: 3}
+    - {fileID: 6771460709475449143, guid: 55c539553846b2346a3b432da7ca4834, type: 3}
+    - {fileID: 2559540664490341222, guid: 0d28b78435c6b9f438cbaf080d5c7425, type: 3}
+    - {fileID: 8429015845098137927, guid: 91987eda1aa0f46488e761842c4c1931, type: 3}
+  - name: 8
+    enemiesAmount: 1
+    delay: 0
+    enemy:
+    - {fileID: 7026175942818691917, guid: 184cca27916e8514293e1c089d2d5098, type: 3}
+    - {fileID: 6771460709475449143, guid: 55c539553846b2346a3b432da7ca4834, type: 3}
+    - {fileID: 2559540664490341222, guid: 0d28b78435c6b9f438cbaf080d5c7425, type: 3}
+    - {fileID: 8429015845098137927, guid: 91987eda1aa0f46488e761842c4c1931, type: 3}
+  - name: 9
+    enemiesAmount: 1
+    delay: 0
+    enemy:
+    - {fileID: 7026175942818691917, guid: 184cca27916e8514293e1c089d2d5098, type: 3}
+    - {fileID: 6771460709475449143, guid: 55c539553846b2346a3b432da7ca4834, type: 3}
+    - {fileID: 2559540664490341222, guid: 0d28b78435c6b9f438cbaf080d5c7425, type: 3}
+    - {fileID: 8429015845098137927, guid: 91987eda1aa0f46488e761842c4c1931, type: 3}
+  - name: 10
+    enemiesAmount: 1
+    delay: 0
+    enemy:
+    - {fileID: 7026175942818691917, guid: 184cca27916e8514293e1c089d2d5098, type: 3}
+    - {fileID: 6771460709475449143, guid: 55c539553846b2346a3b432da7ca4834, type: 3}
+    - {fileID: 2559540664490341222, guid: 0d28b78435c6b9f438cbaf080d5c7425, type: 3}
+    - {fileID: 8429015845098137927, guid: 91987eda1aa0f46488e761842c4c1931, type: 3}
+  - name: 11
+    enemiesAmount: 1
+    delay: 0
+    enemy:
+    - {fileID: 7026175942818691917, guid: 184cca27916e8514293e1c089d2d5098, type: 3}
+    - {fileID: 6771460709475449143, guid: 55c539553846b2346a3b432da7ca4834, type: 3}
+    - {fileID: 2559540664490341222, guid: 0d28b78435c6b9f438cbaf080d5c7425, type: 3}
+    - {fileID: 8429015845098137927, guid: 91987eda1aa0f46488e761842c4c1931, type: 3}
+  - name: 12
+    enemiesAmount: 1
+    delay: 0
+    enemy:
+    - {fileID: 7026175942818691917, guid: 184cca27916e8514293e1c089d2d5098, type: 3}
+    - {fileID: 6771460709475449143, guid: 55c539553846b2346a3b432da7ca4834, type: 3}
+    - {fileID: 2559540664490341222, guid: 0d28b78435c6b9f438cbaf080d5c7425, type: 3}
+    - {fileID: 8429015845098137927, guid: 91987eda1aa0f46488e761842c4c1931, type: 3}
+  timeBetweenWaves: 0.75
   waveCountdown: 0
   spawners:
   - {fileID: 1782811342}
@@ -1089,7 +1170,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 802616399}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.3, y: 5.41, z: -2.31}
+  m_LocalPosition: {x: 10.593, y: 5.41, z: -2.31}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2651,7 +2732,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2098225973}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.96, y: 6.6, z: -2.39}
+  m_LocalPosition: {x: 1.62, y: 6.71, z: -2.39}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
