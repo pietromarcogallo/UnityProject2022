@@ -16,7 +16,7 @@ public class TwoLL : MonoBehaviour
     {
         transition.SetTrigger("Start");
 
-        yield return new WaitForSeconds(3.5f);
+        yield return new WaitForSeconds(1f);
 
         SceneManager.LoadScene(sceneName);
     }

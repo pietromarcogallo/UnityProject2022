@@ -1,12 +1,20 @@
 using System;
+using TMPro;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.PlayerLoop;
 using Random = UnityEngine.Random;
 
 public class EnemySpawner : MonoBehaviour
 {
-    public enum SpawnState { SPAWNING, WAITING, COUNTING};
+    public enum SpawnState { SPAWNING, WAITING, COUNTING, STOPPING};
+
+    public GameObject endStage;
+    public TextMeshProUGUI timerText;
+    private float startTime;
+
+    private bool finished = false;
 
     private int currentWave;
 
@@ -26,11 +34,14 @@ public class EnemySpawner : MonoBehaviour
     {
         waveCountdown = timeBetweenWaves;
         currentWave = 0;
+        startTime = Time.time;
     }
 
     private void Update()
     {
-        if (state == SpawnState.WAITING)
+        UpdateTime();
+        
+        if (state == SpawnState.WAITING || state == SpawnState.STOPPING)
         {
             if (!EnemiesAreDead())
                 return;
@@ -39,7 +50,7 @@ public class EnemySpawner : MonoBehaviour
         }
         if (waveCountdown <= 0)
         {
-            if (state != SpawnState.SPAWNING)
+            if (state != SpawnState.SPAWNING && state != SpawnState.STOPPING)
             {
                 StartCoroutine(SpawnWave(waves[currentWave]));
             }
@@ -107,12 +118,35 @@ public class EnemySpawner : MonoBehaviour
 
         if (currentWave + 1 > waves.Length - 1)
         {
-            other.LoadNextLevel();
-            currentWave = 0;
+            stop();
+            endStage.GetComponent<Animator>().Play("StageCompleted");
+            state = SpawnState.STOPPING;
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                other.LoadNextLevel();
+                currentWave = 0;
+            }
         }
         else
         {
             currentWave++;
         }
+    }
+
+    private void UpdateTime()
+    {
+        if (finished)
+            return;
+        float t = Time.time - startTime;
+
+        string minutes = ((int)t / 60).ToString();
+        string seconds = (t % 60).ToString("f2");
+
+        timerText.text = minutes + ":" + seconds;
+    }
+
+    private void stop()
+    {
+        finished = true;
     }
 }
