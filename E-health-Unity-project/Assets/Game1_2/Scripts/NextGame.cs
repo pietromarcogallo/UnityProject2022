@@ -9,7 +9,7 @@ public class NextGame : MonoBehaviour
 
     public void LoadMenuScene()
     {
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene("MainScene");
     }
 
     public void NextScene() 
