@@ -13,3 +13,8 @@
 13. Perfume: <a href="https://www.flaticon.com/free-icons/perfume" title="perfume icons">Perfume icons created by Freepik - Flaticon</a>
 14. Joystick: <a href="https://www.flaticon.com/free-icons/joystick" title="joystick icons">Joystick icons created by Hilmy Abiyyu A. - Flaticon</a>
 15. Pencil: <a href="https://www.flaticon.com/free-icons/pencil" title="pencil icons">Pencil icons created by Freepik - Flaticon</a>
+16. Mouse: <a href="https://www.flaticon.com/free-icons/mouse" title="mouse icons">Mouse icons created by Freepik - Flaticon</a>
+17. Glass: <a href="https://www.flaticon.com/free-icons/glass-of-water" title="glass of water icons">Glass of water icons created by Freepik - Flaticon</a>
+18. Plant: <a href="https://www.flaticon.com/free-icons/plant" title="plant icons">Plant icons created by Freepik - Flaticon</a>
+19. Mushroom: <a href="https://www.flaticon.com/free-icons/mushroom" title="mushroom icons">Mushroom icons created by Freepik - Flaticon</a>
+20. Ant: <a href="https://www.flaticon.com/free-icons/ant" title="ant icons">Ant icons created by Freepik - Flaticon</a>

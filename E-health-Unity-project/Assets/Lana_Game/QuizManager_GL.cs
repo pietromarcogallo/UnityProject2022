@@ -30,19 +30,50 @@ public class QuizManager_GL : MonoBehaviour
     public Slider musicSlider;
     public AudioMixer audioMixer;
     public AudioSource clickSound;
+    
+    public float TimeLeft;
+    public bool TimerOn = false;
+    public TextMeshProUGUI TimerText;
+
+    public GameObject[] lives;
+    public int life=3;
     private void Start()
     {
         TotalQuestions = QnA.Count;
         GOPanel.SetActive(false);
         generateQuestion();
+        TimerOn = true;
+        
     }
 
     void Update()
     {
+        if (TimerOn)
+        {
+            if (TimeLeft > 0)
+            {
+                TimeLeft -= Time.deltaTime;
+                updateTimer(TimeLeft);
+            }
+            else
+            {
+                TimeLeft = 0;
+                TimerOn = false;
+                GameOver();
+            }
+        }
     }
+    
+    
+    void updateTimer(float currentTime)
+    {
+        currentTime += 1;
+        float minutes = Mathf.FloorToInt(currentTime / 60);
+        float seconds = Mathf.FloorToInt(currentTime % 60);
 
-
-    void GameOver()
+        TimerText.text = string.Format("{0:00} : {1:00}", minutes, seconds);
+    }
+     void GameOver()
     {
         Quizpanel.SetActive(false);
         GOPanel.SetActive(true);
@@ -69,6 +100,12 @@ public class QuizManager_GL : MonoBehaviour
     {
         QnA.RemoveAt(currentQuestion);
         generateQuestion();
+        Destroy(lives[life-1].gameObject);
+        life--;
+        if (life == 0)
+        {
+            GameOver();
+        }
     }
 
     IEnumerator waitForNext()
@@ -127,17 +164,17 @@ public class QuizManager_GL : MonoBehaviour
         GameOver();
         }
     }
-
-
-
+    
     public void toggleSettingsPopup()
     {
         settingsPopup.SetActive(!settingsPopup.activeSelf);
+        TimerOn = false;
     }
 
     public void closeSettingsPopup()
     {
         settingsPopup.SetActive(false);
+        TimerOn = true;
     }
 
 
@@ -165,6 +202,5 @@ public class QuizManager_GL : MonoBehaviour
             audioMixer.SetFloat("SoundEffectsVol", clickSlider.value);
         }
     }
-  
 }
 

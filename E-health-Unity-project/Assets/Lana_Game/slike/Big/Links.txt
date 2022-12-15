@@ -13,3 +13,8 @@
 13. Washing Machine: <a href="https://www.flaticon.com/free-icons/washing-machine" title="washing machine icons">Washing machine icons created by Freepik - Flaticon</a>
 14. Sofa: <a href="https://www.flaticon.com/free-icons/sofa" title="sofa icons">Sofa icons created by Freepik - Flaticon</a>
 15. Closet: <a href="https://www.flaticon.com/free-icons/closet" title="closet icons">Closet icons created by Smashicons - Flaticon</a>
+16. Table: <a href="https://www.flaticon.com/free-icons/table" title="table icons">Table icons created by Smashicons - Flaticon</a>
+17. TV: <a href="https://www.flaticon.com/free-icons/vintage" title="vintage icons">Vintage icons created by Freepik - Flaticon</a>
+18. Bench: <a href="https://www.flaticon.com/free-icons/bench" title="bench icons">Bench icons created by Vichanon Chaimsuk - Flaticon</a>
+19. Tractor: <a href="https://www.flaticon.com/free-icons/tractor" title="tractor icons">Tractor icons created by ultimatearm - Flaticon</a>
+20. Bath: <a href="https://www.flaticon.com/free-icons/bathroom" title="bathroom icons">Bathroom icons created by Pixel perfect - Flaticon</a>
