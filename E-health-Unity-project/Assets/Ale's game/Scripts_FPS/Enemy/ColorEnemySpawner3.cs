@@ -19,6 +19,7 @@ public class ColorEnemySpawner3 : MonoBehaviour
     private int currentWave;
 
     [SerializeField] private Wave[] waves;
+    [SerializeField] private GameObject[] bullets;
 
     [SerializeField] private float timeBetweenWaves;
     [SerializeField] private float waveCountdown = 0;
@@ -97,6 +98,8 @@ public class ColorEnemySpawner3 : MonoBehaviour
             if (!Physics.CheckSphere(randomSpawner.transform.position, objRadius[randomEnemyType]))
             {
                 GameObject newEnemy = Instantiate(enemy[randomEnemyType], randomSpawner.position, enemyTransform[randomEnemyType].rotation);
+                while (randomMaterialColor[randomColor].name == bullets[randomEnemyType].GetComponent<Renderer>().sharedMaterial.name)
+                    randomColor = Random.Range(0, randomMaterialColor.Length);
                 newEnemy.GetComponent <Renderer>().material = randomMaterialColor[randomColor];
                 checkSpawn = 1;
                 CharacterStats newEnemyStats = newEnemy.GetComponent<CharacterStats>();
