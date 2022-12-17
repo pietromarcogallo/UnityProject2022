@@ -276,7 +276,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1792865239}
         m_TargetAssemblyTypeName: GoToGame, Assembly-CSharp
-        m_MethodName: Click
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
