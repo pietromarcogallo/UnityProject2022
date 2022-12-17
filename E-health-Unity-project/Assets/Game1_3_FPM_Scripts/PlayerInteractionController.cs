@@ -34,9 +34,6 @@ public class PlayerInteractionController : MonoBehaviour
     {
         sceneName = SceneManager.GetActiveScene().name;
         buttons = new Button[6] { chickenButton, cowButton, duckButton, pigButton, sheepButton, nullButton };
-        // In the second minigame, after the explosion, the new music restarts after the presentation.
-        if (sceneName == "Game1_3_FPM2")
-            GameObject.FindGameObjectWithTag("music").GetComponent<Music>().PlayMusic(GetComponent<AudioSource>().clip);
         DefineButtons();
     }
 

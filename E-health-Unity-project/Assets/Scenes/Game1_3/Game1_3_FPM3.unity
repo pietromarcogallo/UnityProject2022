@@ -723,7 +723,6 @@ MonoBehaviour:
   pigButton: {fileID: 56179798}
   sheepButton: {fileID: 372692451}
   nullButton: {fileID: 1333068144}
-  buttons: []
 --- !u!82 &67492117
 AudioSource:
   m_ObjectHideFlags: 0
@@ -731,10 +730,10 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 67492111}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 6536924141317832982, guid: be4cc85fc1b96428bb072871c3867055, type: 2}
-  m_audioClip: {fileID: 8300000, guid: c1c2d241cfba04890b59ce2e2fec5b6d, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 2c08842d78540479cbae890dfcd21904, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.05
   m_Pitch: 1
@@ -11291,7 +11290,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 90
+  m_text: 120
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
   m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
