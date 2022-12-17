@@ -5,8 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class GoToGame : MonoBehaviour
 {
-    public void Click()
+    public void LoadNextScene()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(currentSceneIndex + 1);
     }
 }
