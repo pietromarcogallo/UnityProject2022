@@ -2639,6 +2639,14 @@ PrefabInstance:
       propertyPath: m_projectionMatrixMode
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 5496247413253490003, guid: 0e89a21d0cb06e74cbab55bcaf9914eb, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 1148e5b6d635c0242b4f3b1642447334, type: 2}
+    - target: {fileID: 5496247413253490003, guid: 0e89a21d0cb06e74cbab55bcaf9914eb, type: 3}
+      propertyPath: m_UpdateMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6312035132348473853, guid: 0e89a21d0cb06e74cbab55bcaf9914eb, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -2697,11 +2705,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9131739390149223209, guid: 0e89a21d0cb06e74cbab55bcaf9914eb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9131739390149223209, guid: 0e89a21d0cb06e74cbab55bcaf9914eb, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.66
+      value: 5.87
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e89a21d0cb06e74cbab55bcaf9914eb, type: 3}
