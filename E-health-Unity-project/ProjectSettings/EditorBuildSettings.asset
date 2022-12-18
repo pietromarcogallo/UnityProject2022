@@ -107,4 +107,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/FPS_game/SameColorDifferentShape.unity
     guid: 3865a10f2425e834996bc67b3bdc6705
+  - enabled: 1
+    path: Assets/Scenes/ExitGame.unity
+    guid: 1d8122b4c3c87483da06e7c096b589a9
   m_configObjects: {}

@@ -30,7 +30,7 @@ public class SeriousGameManager : MonoBehaviour
 
     public void exitgame()
     {
-        Debug.Log("Exiting Game");
+        SceneManager.LoadScene("Scenes/ExitGame");
         Application.Quit();
     }
 
