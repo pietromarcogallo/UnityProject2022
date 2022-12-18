@@ -12,15 +12,16 @@ public class SoundsGameScoreManager : MonoBehaviour
 
     public GameObject player;   // Reference necessary to update their health condition (hearts)
 
-    private string sceneName;
+    private static string sceneName;
 
-    private int numInteractables = 10;
+    private static float numInteractables;
 
     public TransitionManager[] transitions;
 
 
     private void Awake()
     {
+        numInteractables = 10;
         sceneName = SceneManager.GetActiveScene().name;
         score = sceneName == "Game1_3_FPM" ? 0 : PlayerPrefs.GetFloat("FinalScore");
         firstScore = sceneName == "Game1_3_FPM" ? 0 : PlayerPrefs.GetFloat("ScoreGame1");
@@ -63,6 +64,12 @@ public class SoundsGameScoreManager : MonoBehaviour
             PlayerPrefs.SetFloat("ScoreGame1", firstScore);
             PlayerPrefs.SetFloat("ScoreGame2", secondScore);
             PlayerPrefs.SetFloat("ScoreGame3", thirdScore);
+            if (sceneName == "Game1_3_FPM")
+                PlayerPrefs.SetFloat("Num answers 1", 10 - numInteractables);
+            else if (sceneName == "Game1_3_FPM2")
+                PlayerPrefs.SetFloat("Num answers 2", 10 - numInteractables);
+            else
+                PlayerPrefs.SetFloat("Num answers 3", 10 - numInteractables);
             // SoundsGameSceneManager.LoadGameScene(SceneManager.GetActiveScene().buildIndex + 1);
             // FindObjectOfType<TransitionManager>().StartTransition();
             for (int i = 0; i < transitions.Length; i++)
@@ -81,12 +88,19 @@ public class SoundsGameScoreManager : MonoBehaviour
     public void AnswerGiven()
     {
         numInteractables--;
+        Debug.Log("Num interactables: " + numInteractables);
         if (numInteractables == 0)
         {
             PlayerPrefs.SetFloat("FinalScore", score);
             PlayerPrefs.SetFloat("ScoreGame1", firstScore);
             PlayerPrefs.SetFloat("ScoreGame2", secondScore);
             PlayerPrefs.SetFloat("ScoreGame3", thirdScore);
+            if (sceneName == "Game1_3_FPM")
+                PlayerPrefs.SetFloat("Num answers 1", 10 - numInteractables);
+            else if (sceneName == "Game1_3_FPM2")
+                PlayerPrefs.SetFloat("Num answers 2", 10 - numInteractables);
+            else
+                PlayerPrefs.SetFloat("Num answers 3", 10 - numInteractables);
             // SoundsGameSceneManager.LoadGameScene(SceneManager.GetActiveScene().buildIndex + 1);
             // FindObjectOfType<TransitionManager>().StartTransition();
             for (int i = 0; i < transitions.Length; i++)
@@ -100,5 +114,12 @@ public class SoundsGameScoreManager : MonoBehaviour
         PlayerPrefs.SetFloat("ScoreGame1", firstScore);
         PlayerPrefs.SetFloat("ScoreGame2", secondScore);
         PlayerPrefs.SetFloat("ScoreGame3", thirdScore);
+        Debug.Log("Num interactables: " + numInteractables);
+        if (sceneName == "Game1_3_FPM")
+            PlayerPrefs.SetFloat("Num answers 1", 10 - numInteractables);
+        else if (sceneName == "Game1_3_FPM2")
+            PlayerPrefs.SetFloat("Num answers 2", 10 - numInteractables);
+        else
+            PlayerPrefs.SetFloat("Num answers 3", 10 - numInteractables);
     }
 }

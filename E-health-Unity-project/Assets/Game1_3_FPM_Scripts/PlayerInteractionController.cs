@@ -98,7 +98,7 @@ public class PlayerInteractionController : MonoBehaviour
         if (currentInteractable != null)
         {
             timer += Time.deltaTime;
-            Debug.Log("Time: " + timer);
+            // Debug.Log("Time: " + timer);
             sceneName = SceneManager.GetActiveScene().name;
             if (sceneName == "Game1_3_FPM")
                 PlayerPrefs.SetFloat("Time 1", timer);
