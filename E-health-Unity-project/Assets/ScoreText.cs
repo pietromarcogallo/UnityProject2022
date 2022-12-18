@@ -13,9 +13,9 @@ public class ScoreText : MonoBehaviour
         text = GetComponent<TextMeshProUGUI>();
         switch (gameObject.tag)
         {
-            case "score_1": text.text = PlayerPrefs.GetFloat("ScoreGame1") + "/100"; break;
-            case "score_2": text.text = PlayerPrefs.GetFloat("ScoreGame2") + "/200"; break;
-            case "score_3": text.text = PlayerPrefs.GetFloat("ScoreGame3") + "/200"; break;
+            case "score_1": text.text = "Score: " + PlayerPrefs.GetFloat("ScoreGame1") + "/100\nResponse time: " + PlayerPrefs.GetFloat("Time 1").ToString("F") + " s"; break;
+            case "score_2": text.text = "Score: " + PlayerPrefs.GetFloat("ScoreGame2") + "/200\nResponse time: " + PlayerPrefs.GetFloat("Time 2").ToString("F") + " s"; break;
+            case "score_3": text.text = "Score: " + PlayerPrefs.GetFloat("ScoreGame3") + "/200\nResponse time: " + PlayerPrefs.GetFloat("Time 3").ToString("F") + " s"; break;
         }
     }
 }
