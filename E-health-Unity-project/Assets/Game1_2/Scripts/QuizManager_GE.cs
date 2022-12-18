@@ -2,9 +2,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class QuizManager_GE : MonoBehaviour
 {
+    public AudioMixer audioMixer;
+    public AudioSource clickSound;
+    
 #pragma warning disable 649
     [SerializeField] private QuizGameUI quizGameUI;
     [SerializeField] private List<QuizDataScriptable> quizDataList;
@@ -19,7 +23,7 @@ public class QuizManager_GE : MonoBehaviour
     private int lifesRemaining;
     private float currentTime;
     private QuizDataScriptable dataScriptable;
-
+    private int gameScoreFinale;
     private GameStatus gameStatus = GameStatus.NEXT;
 
     public GameStatus GameStatus { get { return gameStatus; } }
@@ -31,6 +35,7 @@ public class QuizManager_GE : MonoBehaviour
         currentCategory = category;
         correctAnswerCount = 0;
         gameScore = 0;
+        gameScoreFinale= 0;
         lifesRemaining = 3;
         currentTime = timeInSeconds;
         
@@ -84,7 +89,9 @@ public class QuizManager_GE : MonoBehaviour
             correctAnswerCount++;
             correct = true;
             gameScore += 50;
+            gameScoreFinale += 50;
             quizGameUI.ScoreText.text = "Score:" + gameScore;
+            quizGameUI.ScoreText.text = "ScoreFinale:" + gameScoreFinale;
         }
         else
         {
