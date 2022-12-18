@@ -30,9 +30,17 @@ public class PlayerInteractionController : MonoBehaviour
 
     private int firstButtonToAppear, secondButtonToAppear, thirdButtonToAppear;
 
+    private float timer = 0f;
+
     private void Start()
     {
         sceneName = SceneManager.GetActiveScene().name;
+        if (sceneName == "Game1_3_FPM")
+            PlayerPrefs.SetFloat("Time 1", 0f);
+        else if (sceneName == "Game1_3_FPM2")
+            PlayerPrefs.SetFloat("Time 2", 0f);
+        else
+            PlayerPrefs.SetFloat("Time 3", 0f);
         buttons = new Button[6] { chickenButton, cowButton, duckButton, pigButton, sheepButton, nullButton };
         DefineButtons();
     }
@@ -86,6 +94,19 @@ public class PlayerInteractionController : MonoBehaviour
 
         currentInteractable = Physics.Raycast(transform.position, transform.forward, out RaycastHit hit, maxDistance, interactableLayers) ?
             hit.collider.GetComponent<Interactable>() : null;
+
+        if (currentInteractable != null)
+        {
+            timer += Time.deltaTime;
+            Debug.Log("Time: " + timer);
+            sceneName = SceneManager.GetActiveScene().name;
+            if (sceneName == "Game1_3_FPM")
+                PlayerPrefs.SetFloat("Time 1", timer);
+            else if (sceneName == "Game1_3_FPM2")
+                PlayerPrefs.SetFloat("Time 2", timer);
+            else
+                PlayerPrefs.SetFloat("Time 3", timer);
+        }
 
         if (sceneName == "Game1_3_FPM")
         {
