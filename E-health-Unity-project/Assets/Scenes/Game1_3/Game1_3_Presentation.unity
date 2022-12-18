@@ -2627,6 +2627,10 @@ PrefabInstance:
       propertyPath: m_projectionMatrixMode
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 5496247413253490003, guid: 0e89a21d0cb06e74cbab55bcaf9914eb, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 7e979a8d36738144aa699aae865b1e8a, type: 2}
     - target: {fileID: 6312035132348473853, guid: 0e89a21d0cb06e74cbab55bcaf9914eb, type: 3}
       propertyPath: m_RootOrder
       value: 12
@@ -2875,7 +2879,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sentences:
-  - Hello, kids! I'm Qvandor, an alien from the planet Neptune.
+  - Hello! Welcome on the SS Discovery.
+  - My name is Qvandor and I'm an alien from the planet Alpha Sagittarius IV.
   - Despite my appearance, I'm actually 394 years old.
   - Yeah, our species is gifted with a much higher life expectancy than you humans...
   - ... but we still have to challenge the impairments that humans face at a late

@@ -507,6 +507,11 @@ MonoBehaviour:
     - {fileID: 6771460709475449143, guid: 55c539553846b2346a3b432da7ca4834, type: 3}
     - {fileID: 2559540664490341222, guid: 0d28b78435c6b9f438cbaf080d5c7425, type: 3}
     - {fileID: 8429015845098137927, guid: 91987eda1aa0f46488e761842c4c1931, type: 3}
+  bullets:
+  - {fileID: 6933463580596502458, guid: 55686da5075306c408d23949811b4336, type: 3}
+  - {fileID: 3388275216788730059, guid: 001bc234c57323442829d984531dbd53, type: 3}
+  - {fileID: 4358857717248139968, guid: 068faf500cf9c8740869bbb160432e82, type: 3}
+  - {fileID: 8861541862665593215, guid: cbc35992cb3dd7a45af019de2aeae422, type: 3}
   timeBetweenWaves: 0.75
   waveCountdown: 0
   spawners:

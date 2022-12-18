@@ -1158,7 +1158,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -88}
+  m_AnchoredPosition: {x: -8, y: -88}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &234099244
@@ -1195,8 +1195,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Loading...
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
+  m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1256,7 +1256,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: -33.7381, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -2639,6 +2639,14 @@ PrefabInstance:
       propertyPath: m_projectionMatrixMode
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 5496247413253490003, guid: 0e89a21d0cb06e74cbab55bcaf9914eb, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 1148e5b6d635c0242b4f3b1642447334, type: 2}
+    - target: {fileID: 5496247413253490003, guid: 0e89a21d0cb06e74cbab55bcaf9914eb, type: 3}
+      propertyPath: m_UpdateMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6312035132348473853, guid: 0e89a21d0cb06e74cbab55bcaf9914eb, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -2697,11 +2705,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9131739390149223209, guid: 0e89a21d0cb06e74cbab55bcaf9914eb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9131739390149223209, guid: 0e89a21d0cb06e74cbab55bcaf9914eb, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.66
+      value: 5.87
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e89a21d0cb06e74cbab55bcaf9914eb, type: 3}
@@ -3059,7 +3067,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sentences:
-  - Oh, dear Goddesses of Kelestium! Kids, a tragedy just happened!
+  - Oh, dear Goddesses of Kelestium, a tragedy just happened!
   - We were testing in our lab the functioning of a very powerful and supersecret
     device...
   - ... (which you have never heard of from me).
@@ -3084,7 +3092,7 @@ MonoBehaviour:
     of the call it makes.
   - This time I will reward you more for each animal that you correctly pick in both
     parts.
-  - Thank you, kids, you truly are sweethearts. Let's start!
+  - Thank you all, you truly are sweethearts. Let's start!
 --- !u!114 &941629486
 MonoBehaviour:
   m_ObjectHideFlags: 0

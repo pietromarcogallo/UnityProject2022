@@ -7,7 +7,7 @@ using TMPro;
 
 public class CountDown : MonoBehaviour
 {
-    private float timer = 90f;
+    private float timer = 120f;
     private TextMeshProUGUI timerSeconds;
 
     public GameObject popup;
